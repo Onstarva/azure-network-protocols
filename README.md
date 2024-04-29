@@ -112,3 +112,16 @@ To view DNS traffic. Go back to the top text section and type DNS. In Powershell
 - Ask what IP a site is using: nslookup www.google.com
 
 </p>
+<br />
+
+<p>
+  
+![RDP traffic spam](https://github.com/Onstarva/azure-network-protocols/assets/166679644/36371372-c4ba-40f3-95f0-dc03d93be56e)
+
+
+</p>
+<p>
+To observe RDP traffic. Go back to the top text section and type RDP. Do note it will be spamming traffic since you're connecting your computer to a Virtual Machine. Whenever you do anything it will send traffic, typing included.
+
+
+</p>
