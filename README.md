@@ -30,7 +30,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Step 4
   Open Microsoft Powershell
 - Step 5
-  Entering commands for pinging VM2 from VM1
+  Entering commands for Ping, SSH, DHCP, DNS, RDP
 
   
 <h2>Actions and Observations</h2>
