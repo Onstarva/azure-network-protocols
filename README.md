@@ -85,3 +85,30 @@ Now to Filter SSH (shell) go back to the top text box and type SSH and hit enter
   
 </p>
 <br />
+
+<p>
+  
+![DHCP traffic](https://github.com/Onstarva/azure-network-protocols/assets/166679644/b352a1db-6b50-4231-b524-c4d65eb64f89)
+
+
+</p>
+<p>
+To observing DHCP traffic. Go back to the top text section and type DHCP and hit enter. If you wish to renew your IP address, type ipconfig /renew and you will be re-assigned an IP address.
+  
+- Re-issues IP address: ipconfig /renew
+  
+</p>
+<br />
+
+<p>
+  
+![DNS traffic](https://github.com/Onstarva/azure-network-protocols/assets/166679644/6108db23-5c06-4e3c-98e8-4d46ed291470)
+
+
+</p>
+<p>
+To view DNS traffic. Go back to the top text section and type DNS. In Powershell type nslookup followed by the site name and hit enter to ask what the IP address is of a site.
+  
+- Ask what IP a site is using: nslookup www.google.com
+
+</p>
