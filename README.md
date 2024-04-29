@@ -22,32 +22,66 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>High-Level Steps</h2>
 
 - Step 1
+  Create a VM for Windows and create a VM for Linux
 - Step 2
+  Remote Desktop into your windows VM
 - Step 3
+  Download, install and run Wireshark
 - Step 4
+  Open Microsoft Powershell
+- Step 5
+  Entering commands for pinging VM2 from VM1
 
+  
 <h2>Actions and Observations</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![VM window and Linux](https://github.com/Onstarva/azure-network-protocols/assets/166679644/7f11c016-61e3-47cf-8020-899618b2b9ef)
+![Wireshark](https://github.com/Onstarva/azure-network-protocols/assets/166679644/7598d104-cd19-4292-93ea-54dc6a0a7c70)
+![Capturing packets via Wireshark](https://github.com/Onstarva/azure-network-protocols/assets/166679644/906fe341-7a3e-4bd6-b082-a3d2396d51e4)
+![live traffic](https://github.com/Onstarva/azure-network-protocols/assets/166679644/f0b71cf2-d949-414c-8cbd-dd6259a0f828)
+
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+You want to create a VM and resourse group using Windows 10 using 2vcpus. Make another VM with linux connected in the same resource group, region and 2vcpus. Now connect to Windows VM via remote desktop and login. Once the VM windows is done starting up, go to your internet browser and search for Wireshark. Download Wireshark for windows and install it. Once installed, open Wireshark and click Ethernet and click the Blue Sharkfin at the top left of your screen to start capturing packets. You'll now see the live IP traffic that is happening on your VM. Click the top tect line and filter traffic by typing icmp(Internet Control Messaging Protocal) and hit enter. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![VM Ip address](https://github.com/Onstarva/azure-network-protocols/assets/166679644/72dd0933-e37e-47ed-afef-298a3dd8f613)
+![Pinging VM2](https://github.com/Onstarva/azure-network-protocols/assets/166679644/72e3b77b-38dc-4583-90c4-d55e7d740a4f)
+![IPV4](https://github.com/Onstarva/azure-network-protocols/assets/166679644/25dd90ba-c083-4439-9a4a-846915df6f56)
+![-t pings](https://github.com/Onstarva/azure-network-protocols/assets/166679644/b69c5a78-153d-4673-8a38-05c4f5f0693f)
+
+
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now to ping VM2 from VM1. Go back to Azure Portal and find VM2's Private IP address, copy it and back into VM1. Open Windows Powershell while in VM1 and use the command ping # (paste ip address for #) and hit enter. You will see it pinging VM2 from VM1 along with it's packets. You can use the same command to ping sites like google.com and get different ping replys back. The variety ping commands do the following.
+  
+- Forcing connections to Ipv4: -4
+- Infinite Pings: -t
+- Hold and hit Cntl - c to stop infinite Pings
+  
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  
+![SSH](https://github.com/Onstarva/azure-network-protocols/assets/166679644/a4f8d374-9912-4a31-b977-0443f6d5b35d)
+![SSH connected to VM2](https://github.com/Onstarva/azure-network-protocols/assets/166679644/718bec77-a7b4-499d-b140-7ede0fd911cf)
+
+
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Now to Filter SSH (shell) go back to the top text box and type SSH and hit enter. Go back into Powershell the following commands. You will be asked if you wish to continue, type yes and enter. Now enter the usernames password, do note when you type you will not see any text typing when you type. Enter said usernames password and hit enter and if a connection is established you will get a comfirmation from Powershell saying your connected to VM2 in green text. If you wish to disconnect from VM2 to VM1. Type exit and hit enter.
+  
+- ssh username@ # (Example: ssh labsuser@10.0.0.5).
+  
 </p>
 <br />
